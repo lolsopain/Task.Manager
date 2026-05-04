@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4 text-center">Easy Level</h2>
+
+<div class="row">
+    {% for task in tasks %}
+    <div class="col-md-4 mb-3">
+        <div class="card bg-success text-white p-3">
+            <h5>{{ task.title }}</h5>
+            <p>{{ task.desc }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+    <a href="/" class="btn btn-dark">⬅ Back</a>
+</div>
+
+{% endblock %}
